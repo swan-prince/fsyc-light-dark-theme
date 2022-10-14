@@ -1,0 +1,1 @@
+# fsyc-light-dark-theme
