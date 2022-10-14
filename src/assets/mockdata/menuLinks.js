@@ -17,27 +17,27 @@ import daoVotingIcon from 'assets/img/dao-voting.png';
 import supportIcon from 'assets/img/support.png';
 
 const menuLinks = [
-  // [
-  //   {
-  //     title: 'Home Page',
-  //     url: '/home',
-  //     icon: homepageIcon
-  //   },
-  //   // {
-  //   //   title: 'NFT Farm',
-  //   //   url: '/nft-farm',
-  //   //   icon: nftFarmIcon
-  //   // },
-  //   // {
-  //   //   title: 'View Miner',
-  //   //   url: '/miner',
-  //   //   icon: viewMinerIcon
-  //   // }
-  // ],
+  [
+    // {
+    //   title: 'Home Page',
+    //   url: '/home',
+    //   icon: homepageIcon
+    // },
+    // {
+    //   title: 'NFT Farm',
+    //   url: '/nft-farm',
+    //   icon: nftFarmIcon
+    // },
+    // {
+    //   title: 'View Miner',
+    //   url: '/miner',
+    //   icon: viewMinerIcon
+    // }
+  ],
   [
     // {
     //   title: 'NFTs Mint',
-    //   url: '/mint',
+    //   url: '/minting',
     //   icon: nftMintsIcon
     // },
     {

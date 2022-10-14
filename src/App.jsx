@@ -21,7 +21,7 @@ const dark = {
 
 function App() {
 
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   const changeTheme = () => {
     setIsDarkTheme(!isDarkTheme);

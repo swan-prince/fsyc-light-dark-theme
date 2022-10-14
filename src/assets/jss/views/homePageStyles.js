@@ -108,7 +108,7 @@ const homePageStyles = ((theme) => ({
   projectNews: {
     marginTop: '20px',
     width: 'calc((100% - 30px) * 0.74)',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       width: '100%'
     }
   },
@@ -123,7 +123,8 @@ const homePageStyles = ((theme) => ({
   wallet: {
     marginTop: '20px',
     width: 'calc((100% - 30px) * 0.26)',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
+      marginTop: '40px',
       width: '100%'
     }
   },
@@ -140,10 +141,69 @@ const homePageStyles = ((theme) => ({
     '& > h3': {
       fontSize: '36px',
       lineHeight: '44px',
+      marginBottom: '25px',
       '& span': {
         fontSize: '16px',
         lineHeight: '20px'
       }
+    }
+  },
+  tokenDropdown: {
+    width: '68%',
+    paddingLeft: '0',
+    paddingRight: '0',    
+    maxWidth: '300px',
+    '&.MuiButtonBase-root': {
+      justifyContent: 'unset',
+      textTransform: 'none',
+      fontFamily: 'Inter',
+      fontSize: '15.6px',
+      color: theme.palette.mode === 'dark' ? '#fff' : '#000',
+      lineHeight: '19px',
+      '& > img': {
+        marginRight: '16.4px'
+      },
+      '& .MuiSvgIcon-root': {
+        marginLeft: 'auto'
+      },
+      '& > span': {
+        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.6)',
+      }
+    }
+  },
+  tokenItem: {
+    '& img': {
+      marginRight: '16.4px'
+    },
+    '& .MuiTypography-root': {
+      fontSize: '15.6px',
+    }
+  },
+  incomingBox: {
+    marginTop: '40px',
+    '& h6': {
+      fontSize: '32px',
+      lineHeight: '38px',
+      fontWeight: '700',
+      marginBottom: '16px',
+      '& span': {
+        fontSize: '12px',
+        lineHeight: '14.5px',
+        color: theme.palette.mode === 'dark' ? '#fff' : '#000',
+      }
+    }
+  },
+  incomingHeader: {
+    '& .MuiBox-root': {
+      width: '41px',
+      height: '41px',
+      borderRadius: '50%',      
+      marginRight: '16px'
+    },
+    '& p': {
+      fontSize: '14px',
+      lineHeight: '18px',
+      color: '#A9A9A9'
     }
   }
 }));

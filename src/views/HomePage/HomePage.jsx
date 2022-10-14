@@ -10,14 +10,18 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-import CustomButton from 'components/CustomButton';
 import ContensContainer from 'components/ContensContainer';
 import ProjectNewsCard from 'components/ProjectNewsCard';
 import GradientBox from 'components/GradientBox';
+import BannerSection from './BannerSection';
 
 import projectNewsData from 'assets/mockdata/projectNewsData';
-import heroImg from 'assets/img/hero-1.png';
+import tokensData from 'assets/mockdata/tokensData';
 import kadenaIcon from 'assets/img/kadena-icon.png';
+import earningIcon from 'assets/img/earnings.png';
+import earningGraph from 'assets/img/earning-graph.png';
+import nftOwnedIcon from 'assets/img/nft-owned.png';
+import nftGraph from 'assets/img/nft-graph.png';
 import styles from 'assets/jss/views/homePageStyles';
 const useStyles = makeStyles(styles);
 
@@ -27,7 +31,8 @@ const HomePage = () => {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
+  const [token, setToken] = useState({ name: 'Kadena', unit: 'KDA' })
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -37,47 +42,7 @@ const HomePage = () => {
 
   return (
     <ContensContainer title='About The Project' sx={{ backgroundColor: theme.palette.mode === 'dark' ? '#1A1C1E' : '#fff' }}>
-      <Box className={classes.bannerBox} position='relative'>
-        <Box display='flex' className={classes.bannerInner} position='relative'>
-          <Box className={classes.heroImg} display='flex'>
-            <img src={heroImg} alt="" width='100%' />
-          </Box>
-          <Box className={classes.bannerContent}>
-            <Typography variant='h3' fontWeight={700}>
-              Full Spend Yacht Club
-            </Typography>
-            <Typography variant='body1'>
-              Full Spend Yacht Club is a Kadena mining NFT that focuses on maximizing profitability per dollar spent.
-              We do this by putting 90% of our mint funds directly into mining and utilizing the latest immersion cooling technology to allow us to maximize the profit from each miner.
-              Full Spend Yacht Club is a collection of 9,999 unique NFTs that are generated randomly from over 100 unique traits. By staking your NFT,
-              you can rent real ASIC miners that mine rewards directly into your wallet.
-              Help control the future of the project by utilizing our DAO voting platform and vote on the future actions of the project!
-            </Typography>
-            <Box display='flex' justifyContent='space-between' className={classes.detailRow}>
-              <Box>
-                <Typography variant='h6' fontWeight={700} fontFamily='Inter'>
-                  NFTs
-                </Typography>
-                <Typography variant='body1' fontWeight={500} fontFamily='Inter'>
-                  $51,0062
-                </Typography>
-              </Box>
-              <Box>
-                <Typography variant='h6' fontWeight={700} fontFamily='Inter'>
-                  Owners
-                </Typography>
-                <Typography variant='body1' fontWeight={500} fontFamily='Inter'>
-                  51,0062 KDA
-                </Typography>
-              </Box>
-              <CustomButton variant={theme.palette.mode === 'dark' ? 'gradientFill' : 'whiteFill'} className={classes.mintBtn}>
-                Mint
-              </CustomButton>
-            </Box>
-          </Box>
-        </Box>
-        <Box className={classes.borderBox} position='absolute'></Box>
-      </Box>
+      <BannerSection />
 
       <Box display='flex' flexWrap='wrap' justifyContent='space-between'>
         <Box className={classes.projectNews}>
@@ -108,31 +73,88 @@ const HomePage = () => {
                 <span>KDA </span>
                 21.533.10
               </Typography>
-              <Box>
+              <Box textAlign='center'>
                 <Button
                   id="basic-button"
-                  aria-controls={open ? 'basic-menu' : undefined}
+                  aria-controls={Boolean(anchorEl) ? 'basic-menu' : undefined}
                   aria-haspopup="true"
-                  aria-expanded={open ? 'true' : undefined}
+                  aria-expanded={Boolean(anchorEl) ? 'true' : undefined}
                   onClick={handleClick}
+                  className={classes.tokenDropdown}
                 >
                   <img src={kadenaIcon} width={26.6} alt="" />
-                  Dashboard
+                  <span>{token.name}&nbsp;</span> {token.unit}
                   <KeyboardArrowDownIcon />
                 </Button>
                 <Menu
                   id="basic-menu"
                   anchorEl={anchorEl}
-                  open={open}
+                  open={Boolean(anchorEl)}
                   onClose={handleClose}
                   MenuListProps={{
                     'aria-labelledby': 'basic-button',
                   }}
                 >
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>My account</MenuItem>
-                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  {
+                    tokensData.map((cell) => (
+                      <MenuItem
+                        key={cell.name}
+                        onClick={() => {
+                          setToken(cell);
+                          handleClose();
+                        }}
+                        className={classes.tokenItem}
+                      >
+                        <img src={kadenaIcon} width={26.6} alt="" />
+                        <Typography variant='body1'>
+                          <span>{cell.name}&nbsp;</span>
+                          {cell.unit}
+                        </Typography>
+                      </MenuItem>
+                    ))
+                  }
                 </Menu>
+              </Box>
+
+              <Box>
+                <Grid container spacing={2} columnSpacing={4}>
+                  <Grid item xs={12} sm={6}>
+                    <Box className={classes.incomingBox}>
+                      <Box display='flex' alignItems='center' className={classes.incomingHeader} mb={1}>
+                        <Box display='flex' alignItems='center' justifyContent='center' sx={{background: 'rgba(13, 220, 133, 0.12)'}}>
+                          <img src={earningIcon} alt="" />
+                        </Box>
+                        <Typography variant='body1' fontWeight={500}>
+                          Earnings
+                        </Typography>
+                      </Box>
+                      <Typography variant='h6' align='center' fontFamily='Inter' color='#34D178'>
+                        7.048 <span>&nbsp;KDA</span>
+                      </Typography>
+                      <Box display='flex' mx='auto' maxWidth={300}>
+                        <img src={earningGraph} alt="" width='100%' />
+                      </Box>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <Box className={classes.incomingBox}>
+                      <Box display='flex' alignItems='center' className={classes.incomingHeader} mb={1}>
+                        <Box display='flex' alignItems='center' justifyContent='center' sx={{background: 'rgba(255, 0, 0, 0.12)'}}>
+                          <img src={nftOwnedIcon} alt="" />
+                        </Box>
+                        <Typography variant='body1' fontWeight={500}>
+                          NFTs Owned
+                        </Typography>
+                      </Box>
+                      <Typography variant='h6' align='center' fontFamily='Inter' color='#8B41AB'>
+                        2.013 <span>&nbsp;NFTs</span>
+                      </Typography>
+                      <Box display='flex' mx='auto' maxWidth={300}>
+                        <img src={nftGraph} alt="" width='100%' />
+                      </Box>
+                    </Box>
+                  </Grid>
+                </Grid>
               </Box>
             </Box>
           </GradientBox>
