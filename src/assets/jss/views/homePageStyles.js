@@ -119,6 +119,32 @@ const homePageStyles = ((theme) => ({
       marginBottom: '34px',
       color: theme.palette.mode === 'dark' ? '#fff' : '#2B6AD8',
     }
+  },
+  wallet: {
+    marginTop: '20px',
+    width: 'calc((100% - 30px) * 0.26)',
+    [theme.breakpoints.down('md')]: {
+      width: '100%'
+    }
+  },
+  walletInner: {
+    padding: '28px 16px 8px',
+    backgroundColor: theme.palette.mode === 'dark' ? '#000' : '#fff',
+    borderRadius: '8px',
+    color: theme.palette.mode === 'dark' ? '#fff' : '#000',
+    '& > p': {
+      fontSize: '16px',
+      lineHeight: '20px',
+      marginBottom: '12px'
+    },
+    '& > h3': {
+      fontSize: '36px',
+      lineHeight: '44px',
+      '& span': {
+        fontSize: '16px',
+        lineHeight: '20px'
+      }
+    }
   }
 }));
 

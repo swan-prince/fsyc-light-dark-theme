@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import InputAdornment from '@mui/material/InputAdornment';
 import Badge from '@mui/material/Badge';
+import IconButton from '@mui/material/IconButton';
 
 import CustomTextField from 'components/CustomTextField';
 import CustomButton from 'components/CustomButton';
@@ -18,6 +19,7 @@ import notificationIcon from 'assets/img/notification.png';
 import userIcon from 'assets/img/user-avatar.png';
 import plusIcon from 'assets/img/plus.png';
 import plusWhiteIcon from 'assets/img/plus-white.png';
+import closeIcon from 'assets/img/close-green.png';
 
 import styles from 'assets/jss/components/drawerStyles';
 const useStyles = makeStyles(styles);
@@ -36,6 +38,11 @@ const HamburgerMenu = (props) => {
       className={classes.hamburgerDrawer}
     >
       <Box className={classes.hamburgerContents}>
+        <Box display='flex'>
+          <IconButton onClick={handleClose} sx={{marginLeft: 'auto'}}>
+            <img src={closeIcon} width={14} height={14} alt="" />
+          </IconButton>
+        </Box>
         {/* <Box display='flex' alignItems="center" justifyContent='space-between' sx={{ padding: '0px 10px' }}>
           <Button className={classes.userBtn}>
             <img src={userIcon} alt="User" width='100%' height='100%' />
@@ -63,14 +70,13 @@ const HamburgerMenu = (props) => {
             fullWidth
             variant='gradientFill'
             startIcon={<img src={theme.palette.mode === 'dark' ? plusIcon : plusWhiteIcon} alt='Connect Discord' />}
-            onClick={handleClose}
           >
             Connect Discord
           </CustomButton>
           <CustomButton
             fullWidth
             variant='gradientOutline'
-            sx={{marginTop: '23px'}}
+            sx={{ marginTop: '23px' }}
             startIcon={<img src={plusIcon} alt='Connect Discord' />}
             onClick={handleOpenConnectWallet}
           >

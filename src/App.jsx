@@ -34,7 +34,8 @@ function App() {
           <Routes>
             <Route path='/minting' element={<MintingPage />} />
             <Route path='/pre-sale' element={<PreSalePage />} />
-            <Route path='/' element={<HomePage />} />
+            <Route path='/home' element={<HomePage />} />
+            <Route path='/' element={<PreSalePage />} />
           </Routes>
         </Layout>
       </ThemeProvider>

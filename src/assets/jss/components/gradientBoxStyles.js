@@ -10,10 +10,10 @@ const gradientBoxStyles = (() => ({
     zIndex: '2'
   },
   largeBorderWidth: {
-    width: 'calc(100% + 3.4px)',
-    height: 'calc(100% + 3.4px)',
-    top: '-1.7px',
-    left: '-1.7px'
+    width: 'calc(100% + 4px)',
+    height: 'calc(100% + 4px)',
+    top: '-2px',
+    left: '-2px'
   },
   smallBorderWidth: {
     width: 'calc(100% + 2px)',

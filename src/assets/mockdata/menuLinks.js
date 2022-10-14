@@ -17,83 +17,83 @@ import daoVotingIcon from 'assets/img/dao-voting.png';
 import supportIcon from 'assets/img/support.png';
 
 const menuLinks = [
+  // [
+  //   {
+  //     title: 'Home Page',
+  //     url: '/home',
+  //     icon: homepageIcon
+  //   },
+  //   // {
+  //   //   title: 'NFT Farm',
+  //   //   url: '/nft-farm',
+  //   //   icon: nftFarmIcon
+  //   // },
+  //   // {
+  //   //   title: 'View Miner',
+  //   //   url: '/miner',
+  //   //   icon: viewMinerIcon
+  //   // }
+  // ],
   [
-    {
-      title: 'Home Page',
-      url: '/',
-      icon: homepageIcon
-    },
-    {
-      title: 'NFT Farm',
-      url: '/nft-farm',
-      icon: nftFarmIcon
-    },
-    {
-      title: 'View Miner',
-      url: '/miner',
-      icon: viewMinerIcon
-    }
-  ],
-  [
-    {
-      title: 'NFTs Mint',
-      url: '/mint',
-      icon: nftMintsIcon
-    },
+    // {
+    //   title: 'NFTs Mint',
+    //   url: '/mint',
+    //   icon: nftMintsIcon
+    // },
     {
       title: 'Pre-Sale',
-      url: '/pre-sale',
+      url: '/',
       icon: preSaleIcon
     },
-    {
-      title: 'Marketplace',
-      url: '/marketplace',
-      icon: marketIcon,
-      lightIcon: lightMarketIcon
-    },
-    {
-      title: 'My Inventory',
-      url: '/inventory',
-      icon: inventoryIcon
-    }
+    // {
+    //   title: 'Marketplace',
+    //   url: '/marketplace',
+    //   icon: marketIcon,
+    //   lightIcon: lightMarketIcon
+    // },
+    // {
+    //   title: 'My Inventory',
+    //   url: '/inventory',
+    //   icon: inventoryIcon
+    // }
   ],
-  [
-    {
-      title: 'Mining dashboard',
-      url: '/dashboard',
-      icon: dashboardIcon,
-      lightIcon: lightDashboardIcon
-    },
-    {
-      title: 'Mining Farm',
-      url: '/mining-farm',
-      icon: miningFarmIcon,
-      lightIcon: lightMiningFarmIcon
-    },
-    {
-      title: 'Staking',
-      url: '/staking',
-      icon: stakingIcon
-    },
-    {
-      title: 'Sweepstakes',
-      url: '/sweepstakes',
-      icon: sweepstakesIcon,
-      lightIcon: lightSweepstakesIcon
-    },
-    {
-      title: 'DAO Voting',
-      url: '/dao-voting',
-      icon: daoVotingIcon
-    }
-  ],
-  [
-    {
-      title: 'Support',
-      url: '/support',
-      icon: supportIcon
-    }
-  ]
+  // [
+  //   {
+  //     title: 'Mining dashboard',
+  //     url: '/dashboard',
+  //     icon: dashboardIcon,
+  //     lightIcon: lightDashboardIcon
+  //   },
+  //   {
+  //     title: 'Mining Farm',
+  //     url: '/mining-farm',
+  //     icon: miningFarmIcon,
+  //     lightIcon: lightMiningFarmIcon
+  //   },
+  //   {
+  //     title: 'Staking',
+  //     url: '/staking',
+  //     icon: stakingIcon
+  //   },
+  //   {
+  //     title: 'Sweepstakes',
+  //     url: '/sweepstakes',
+  //     icon: sweepstakesIcon,
+  //     lightIcon: lightSweepstakesIcon
+  //   },
+  //   {
+  //     title: 'DAO Voting',
+  //     url: '/dao-voting',
+  //     icon: daoVotingIcon
+  //   }
+  // ],
+  // [
+  //   {
+  //     title: 'Support',
+  //     url: '/support',
+  //     icon: supportIcon
+  //   }
+  // ]
 ];
 
 export default menuLinks;
