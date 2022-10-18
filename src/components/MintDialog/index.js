@@ -1,1 +1,1 @@
-export { default } from './MintDialog';
+export { default } from './mintDialog';

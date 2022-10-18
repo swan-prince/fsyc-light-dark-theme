@@ -5,7 +5,7 @@ import { makeStyles } from "@mui/styles";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import CustomButton from 'components/CustomButton';
+import CustomButton from 'components/customButton';
 
 import heroImg from 'assets/img/hero-1.png';
 import styles from 'assets/jss/views/homePageStyles';

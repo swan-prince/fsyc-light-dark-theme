@@ -1,1 +1,1 @@
-export { default } from './MintingPage';
+export { default } from './mintingPage';

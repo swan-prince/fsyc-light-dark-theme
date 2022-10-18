@@ -11,7 +11,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
-import CustomButton from 'components/CustomButton';
+import CustomButton from 'components/customButton';
 import closeIcon from 'assets/img/close-green.png';
 import kadenaIcon from 'assets/img/kend.png';
 import styles from 'assets/jss/components/dialogStyles';

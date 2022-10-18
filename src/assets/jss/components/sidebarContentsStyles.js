@@ -60,12 +60,7 @@ const sidebarContentsStyles = ((theme) => ({
       width: '42px'
     },
     [theme.breakpoints.down('md')]: {
-      paddingLeft: '20px',
-      // height: '34.5px',
-      // '&.MuiLink-root': {
-      //   fontSize: "14px",
-      //   lineHeight: '18px'
-      // }
+      paddingLeft: '20px'   
     }
   },
   linksGroup: {
@@ -127,10 +122,10 @@ const sidebarContentsStyles = ((theme) => ({
       color: theme.palette.mode === 'dark' ? '#2B6AD8' : '#fff',
     },
     '& .dark-icon': {
-      display: theme.palette.mode === 'dark' ? 'none' : 'block'
+      display: theme.palette.mode === 'dark' ? 'none !important' : 'block !important'
     },
     '& .light-icon': {
-      display: theme.palette.mode === 'dark' ? 'block' : 'none'
+      display: theme.palette.mode === 'dark' ? 'block !important' : 'none !important'
     }
   }
 }));

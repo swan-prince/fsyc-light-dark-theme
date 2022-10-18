@@ -9,8 +9,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Badge from '@mui/material/Badge';
 import IconButton from '@mui/material/IconButton';
 
-import CustomTextField from 'components/CustomTextField';
-import CustomButton from 'components/CustomButton';
+import CustomTextField from 'components/customTextField';
+import CustomButton from 'components/customButton';
 
 import searchIcon from 'assets/img/search.png';
 import plusIcon from 'assets/img/plus.png';

@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { useTheme } from '@mui/material/styles';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { makeStyles } from "@mui/styles";
 
@@ -19,9 +20,10 @@ const SidebarContents = (props) => {
 
   const { changeTheme, isDarkTheme } = props;
   const classes = useStyles();
+  const theme = useTheme();
 
   const locatin = useLocation();
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
 
   return (
     <Box className={classes.sidebarContents}>
@@ -38,7 +40,7 @@ const SidebarContents = (props) => {
                     underline='none'
                     variant='button'
                     href={link.url}
-                    className={clsx(classes.menuLink, {[classes.active]: locatin.pathname === link.url})}
+                    className={clsx(classes.menuLink, { [classes.active]: locatin.pathname === link.url })}
                     key={link.title}
                     onClick={(e) => {
                       e.preventDefault();
@@ -46,7 +48,7 @@ const SidebarContents = (props) => {
                     }}
                   >
                     <Box display='flex' alignItems='center' justifyContent='center'>
-                      <img src={link.icon} className={clsx({'dark-icon': !!link.lightIcon})} alt={link.title} />
+                      <img src={link.icon} className={clsx({ 'dark-icon': !!link.lightIcon })} alt={link.title} />
                       {
                         link.lightIcon && (
                           <img src={link.lightIcon} className='light-icon' alt={link.title} />
@@ -73,7 +75,10 @@ const SidebarContents = (props) => {
           <Box display='flex' alignItems='center' justifyContent='center'>
             <img src={themeModeImg} alt='' />
           </Box>
-          Dark mode
+          {
+            theme.palette.mode === 'dark' ? 'Light Mode' : 'Dark mode'
+          }
+          
           <Switch
             checked={isDarkTheme}
             onChange={changeTheme}

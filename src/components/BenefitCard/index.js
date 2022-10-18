@@ -1,1 +1,1 @@
-export { default } from './BenefitCard';
+export { default } from './benefitCard';

@@ -48,7 +48,7 @@ const buttonStyles = ((theme) => ({
   },
   whiteFill: {
     '&.MuiButtonBase-root': {
-      backgroundColor: '#fff',
+      backgroundColor: '#fff !important',
       color: '#000'
     }
   },
@@ -57,7 +57,7 @@ const buttonStyles = ((theme) => ({
       backgroundColor: '#01DE8E !important',
       color: '#000'
     }
-  }
+  }  
 }));
 
 export default buttonStyles;

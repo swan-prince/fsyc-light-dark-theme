@@ -1,1 +1,1 @@
-export { default } from './ProjectNewsCard';
+export { default } from './projectNewsCard';

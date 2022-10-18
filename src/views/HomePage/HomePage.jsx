@@ -10,10 +10,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-import ContensContainer from 'components/ContensContainer';
-import ProjectNewsCard from 'components/ProjectNewsCard';
-import GradientBox from 'components/GradientBox';
-import BannerSection from './BannerSection';
+import ContensContainer from 'components/contensContainer';
+import ProjectNewsCard from 'components/projectNewsCard';
+import GradientBox from 'components/gradientBox';
+import BannerSection from './bannerSection';
 
 import projectNewsData from 'assets/mockdata/projectNewsData';
 import tokensData from 'assets/mockdata/tokensData';

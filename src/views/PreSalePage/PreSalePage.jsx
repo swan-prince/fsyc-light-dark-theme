@@ -6,12 +6,12 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
-import CustomButton from 'components/CustomButton';
-import ContensContainer from 'components/ContensContainer';
-import GradientBox from 'components/GradientBox';
-import BenefitCard from 'components/BenefitCard';
-import MintDialog from 'components/MintDialog';
-import TransactionResultDialog from 'components/TransactionResultDialog';
+import CustomButton from 'components/customButton';
+import ContensContainer from 'components/contensContainer';
+import GradientBox from 'components/gradientBox';
+import BenefitCard from 'components/benefitCard';
+import MintDialog from 'components/mintDialog';
+import TransactionResultDialog from 'components/transactionResultDialog';
 
 import benefitsData from 'assets/mockdata/benefitsData';
 import heroImg from 'assets/img/pre-sale-hero.png';

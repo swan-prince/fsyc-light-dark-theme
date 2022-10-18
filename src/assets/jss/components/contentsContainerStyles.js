@@ -19,6 +19,8 @@ const contentsContainerStyles = ((theme) => ({
       lineHeight: '37.8px',
       marginBottom: '20px',
       color: theme.palette.mode === 'dark' ? '#fff' : '#8B41AB',
+      position: 'relative',
+      zIndex: '2'
     },
     [theme.breakpoints.down('md')]: {
       display: 'none'

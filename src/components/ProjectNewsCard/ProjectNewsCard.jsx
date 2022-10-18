@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import GradientBox from 'components/GradientBox';
+import GradientBox from 'components/gradientBox';
 
 import styles from 'assets/jss/components/projectNewsCardStyles';
 const useStyles = makeStyles(styles);

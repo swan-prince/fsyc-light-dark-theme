@@ -1,6 +1,6 @@
 const dialogStyles = ((theme) => ({
   dialog: {
-    '& .MuiPaper-root': {
+    '& .MuiDialog-paper': {
       background: theme.palette.mode === 'dark' ? '#000' : '#fff',
       boxShadow: '0px 4px 60px rgba(1, 222, 142, 0.3)',
       border: '1px solid #01DE8E',
@@ -55,31 +55,7 @@ const dialogStyles = ((theme) => ({
         boxShadow: '0px 4px 8px rgba(1, 222, 142, 0.3)'
       }
     }
-  },
-  zelcoreBtn: {
-    '&.MuiButtonBase-root': {
-      '&::before': {
-        top: '0',
-        left: '0',
-        content: `''`,
-        position: 'absolute',
-        width: '100%',
-        height: '1px',
-        backgroundColor: '#01DE8E',
-        boxShadow: '5px 0px 6px #01DE8E'
-      },
-      '&::after': {
-        bottom: '0',
-        left: '0',
-        content: `''`,
-        position: 'absolute',
-        width: '100%',
-        height: '1px',
-        backgroundColor: '#01DE8E',
-        boxShadow: '5px 0px 6px #01DE8E'
-      }
-    }
-  },
+  },  
   mintHeader: {
     marginBottom: '40px'
   },
@@ -126,6 +102,11 @@ const dialogStyles = ((theme) => ({
       fontSize: '16px',
       fontWeight: '600',
       borderRadius: '8px'
+    }
+  },
+  whiteDivider: {
+    '&.MuiDivider-root': {
+      borderColor: theme.palette.mode === 'dark' ? '#fff' : '#000'
     }
   }
 }));

@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 
 import Drawer from '@mui/material/Drawer';
 
-import SidebarContents from 'components/SidebarContents';
+import SidebarContents from 'components/sidebarContents';
 
 import styles from 'assets/jss/components/drawerStyles';
 const useStyles = makeStyles(styles);

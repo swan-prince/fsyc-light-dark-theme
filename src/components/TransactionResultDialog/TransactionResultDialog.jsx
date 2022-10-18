@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 
-import CustomButton from 'components/CustomButton';
+import CustomButton from 'components/customButton';
 import closeIcon from 'assets/img/close-green.png';
 import styles from 'assets/jss/components/dialogStyles';
 const useStyles = makeStyles(styles);

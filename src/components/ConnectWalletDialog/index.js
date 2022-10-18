@@ -1,1 +1,1 @@
-export { default } from './ConnectWalletDialog';
+export { default } from './connectWalletDialog';

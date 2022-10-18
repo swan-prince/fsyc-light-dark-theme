@@ -4,11 +4,11 @@ import { makeStyles } from "@mui/styles";
 
 import Box from '@mui/material/Box';
 
-import SidebarContents from 'components/SidebarContents';
-import Header from 'components/Header';
-import MenuDrawer from 'components/MenuDrawer';
-import HamburgerMenu from 'components/HamburgerMenu';
-import ConnectWalletDialog from 'components/ConnectWalletDialog';
+import SidebarContents from 'components/sidebarContents';
+import Header from 'components/header';
+import MenuDrawer from 'components/menuDrawer';
+import HamburgerMenu from 'components/hamburgerMenu';
+import ConnectWalletDialog from 'components/connectWalletDialog';
 
 import styles from 'assets/jss/components/layoutStyles';
 const useStyles = makeStyles(styles);
